@@ -9,6 +9,6 @@ public :
     void InsertAtHead(int Value);
     void InsertAfterExistingNode(int Key, int Value) const;
     void InsertAtEnd(int Value);
-    static void DeleteNode(Node** Head, int Key);
+    void DeleteNode(int Key);
     bool SearchNode(int Key);
 };

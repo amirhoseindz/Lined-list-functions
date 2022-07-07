@@ -9,7 +9,7 @@ int main()
     List->InsertAfterExistingNode(2, 3);
     List->InsertAfterExistingNode(3, 4);
     List->InsertAtEnd(5);
-    List->DeleteNode(&List -> Head, 1);
+    List->DeleteNode(1);
     int TargetNumber;
     Node* Temp = List -> Head;
     while (Temp != nullptr)

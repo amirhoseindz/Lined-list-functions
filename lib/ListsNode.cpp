@@ -40,10 +40,10 @@ void Node :: InsertAtEnd(int Value)
     }
     Temp -> Next = n;
 }
-void Node :: DeleteNode(Node** Head, int Key)
+void Node :: DeleteNode(int Key)
 {
-    Node *Temp = *Head;
-    Node *FirstElement = *Head;
+    Node *Temp = *&Head;
+    Node *FirstElement = *&Head;
     Node *Prev;
     while (Temp != nullptr)
     {
@@ -60,7 +60,7 @@ void Node :: DeleteNode(Node** Head, int Key)
     }
     if (Temp -> Element == FirstElement -> Element)
     {
-        *Head = Temp -> Next;
+        *&Head = Temp -> Next;
     }
     else
     {

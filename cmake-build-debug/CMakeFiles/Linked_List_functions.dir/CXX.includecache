@@ -10,10 +10,6 @@ D:/c_lion/Linked_List functions/include/ListsNode.h
 iostream
 -
 
-D:/c_lion/Linked_List functions/lib/ListsNode.cpp
-../include/ListsNode.h
-D:/c_lion/Linked_List functions/include/ListsNode.h
-
 D:/c_lion/Linked_List functions/test/main.cpp
 ../include/ListsNode.h
 D:/c_lion/Linked_List functions/include/ListsNode.h
