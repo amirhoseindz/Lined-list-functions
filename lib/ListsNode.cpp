@@ -4,13 +4,13 @@ Node :: Node (int Value)
     Element = Value;
     Next = nullptr;
 }
-void Node :: InsertAtHead(Node*& Head, int Value)
+void Node :: InsertAtHead(int Value)
 {
     Node* n = new Node(Value);
     n -> Next = Head;
     Head = n;
 }
-void Node :: InsertAfterExistingNode(Node*& Head, int Key, int Value)
+void Node :: InsertAfterExistingNode(int Key, int Value) const
 {
     Node* n = new Node(Value);
     Node* Temp = Head;
@@ -25,7 +25,7 @@ void Node :: InsertAfterExistingNode(Node*& Head, int Key, int Value)
     n -> Next = Temp -> Next;
     Temp -> Next = n;
 }
-void Node :: InsertAtEnd(Node*& Head, int Value)
+void Node :: InsertAtEnd(int Value)
 {
     Node* n = new Node(Value);
     if (Head == nullptr)
@@ -68,15 +68,15 @@ void Node :: DeleteNode(Node** Head, int Key)
     }
     free(Temp);
 }
-bool Node :: SearchNode(Node* Current, int Key)
+bool Node :: SearchNode(int Key)
 {
-    while (Current != nullptr)
+    while (Head != nullptr)
     {
-        if (Current -> Element == Key)
+        if (Head -> Element == Key)
         {
             return true;
         }
-        Current = Current->Next;
+        Head = Head->Next;
     }
     return false;
 }
