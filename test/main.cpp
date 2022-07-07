@@ -40,29 +40,29 @@ void InsertAtEnd(Node*& Head, int Value)
 void DeleteNode(Node** Head, int Key)
 {
     Node *Temp = *Head;
+    Node *FirstElement = *Head;
     Node *Prev;
-    if (Temp != nullptr)
+    while (Temp != nullptr)
     {
-        if(Temp -> Element == Key)
+        if (Temp -> Element == Key)
         {
-            *Head = Temp -> Next;
-            free(Temp);
-            return;
+            break;
         }
-        else
-        {
-            while (Temp -> Element != Key)
-            {
-                Prev = Temp;
-                Temp = Temp -> Next;
-            }
-        }
+        Prev = Temp;
+        Temp = Temp -> Next;
     }
     if (Temp == nullptr)
     {
         return;
     }
-    Prev -> Next = Temp -> Next;
+    if (Temp -> Element == FirstElement -> Element)
+    {
+        *Head = Temp -> Next;
+    }
+    else
+    {
+        Prev -> Next = Temp -> Next;
+    }
     free(Temp);
 }
 bool SearchNode(Node* Current, int Key)
@@ -85,7 +85,7 @@ int main()
     InsertAfterExistingNode(Head, 2, 3);
     InsertAfterExistingNode(Head, 3, 4);
     InsertAtEnd(Head, 5);
-    DeleteNode(&Head, 3);
+    DeleteNode(&Head, 1);
     int TargetNumber;
     cout << "pleas enter the number you want to see if its in list or not : " << endl;
     cin >> TargetNumber;
