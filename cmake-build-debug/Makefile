@@ -169,6 +169,33 @@ lib/ListsNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Linked_List_functions.dir\build.make CMakeFiles/Linked_List_functions.dir/lib/ListsNode.cpp.s
 .PHONY : lib/ListsNode.cpp.s
 
+lib/node.obj: lib/node.cpp.obj
+
+.PHONY : lib/node.obj
+
+# target to build an object file
+lib/node.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Linked_List_functions.dir\build.make CMakeFiles/Linked_List_functions.dir/lib/node.cpp.obj
+.PHONY : lib/node.cpp.obj
+
+lib/node.i: lib/node.cpp.i
+
+.PHONY : lib/node.i
+
+# target to preprocess a source file
+lib/node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Linked_List_functions.dir\build.make CMakeFiles/Linked_List_functions.dir/lib/node.cpp.i
+.PHONY : lib/node.cpp.i
+
+lib/node.s: lib/node.cpp.s
+
+.PHONY : lib/node.s
+
+# target to generate assembly for a file
+lib/node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Linked_List_functions.dir\build.make CMakeFiles/Linked_List_functions.dir/lib/node.cpp.s
+.PHONY : lib/node.cpp.s
+
 test/main.obj: test/main.cpp.obj
 
 .PHONY : test/main.obj
@@ -208,6 +235,9 @@ help:
 	@echo ... lib/ListsNode.obj
 	@echo ... lib/ListsNode.i
 	@echo ... lib/ListsNode.s
+	@echo ... lib/node.obj
+	@echo ... lib/node.i
+	@echo ... lib/node.s
 	@echo ... test/main.obj
 	@echo ... test/main.i
 	@echo ... test/main.s

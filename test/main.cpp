@@ -3,19 +3,18 @@
 using namespace std;
 int main()
 {
-    int Value;
-    Node <int> List(Value);
-    List.InsertAtHead(1);
-    List.InsertAfterExistingNode(1, 2);
-    List.InsertAfterExistingNode(2, 3);
-    List.InsertAfterExistingNode(3, 4);
-    List.InsertAtEnd(5);
-    List.DeleteNode(1);
-    List.Print();
+    List <int> MyList;
+    MyList.InsertAtHead(1);
+    MyList.InsertAfterExistingNode(1, 2);
+    MyList.InsertAfterExistingNode(2, 3);
+    MyList.InsertAfterExistingNode(3, 4);
+    MyList.InsertAtEnd(5);
+    MyList.DeleteNode(1);
+    MyList.Print();
     int TargetNumber;
     cout << endl << "pleas enter the number you want to see if its in list or not : " << endl;
     cin >> TargetNumber;
-    if (List.SearchNode(TargetNumber))
+    if (MyList.SearchNode(TargetNumber))
     {
         cout << "The number is in th list" << endl;
     }
@@ -23,13 +22,12 @@ int main()
     {
         cout << "The number is not on the list" << endl;
     }
-    char Char;
-    Node <char> List1(Char);
-    List1.InsertAtHead('a');
-    List1.InsertAfterExistingNode('a', 'b');
-    List1.InsertAfterExistingNode('b', 'c');
-    List1.InsertAfterExistingNode('c', 'd');
-    List1.InsertAtEnd('e');
-    List1.DeleteNode('c');
-    List1.Print();
+    List <char> MyList1;
+    MyList1.InsertAtHead('a');
+    MyList1.InsertAfterExistingNode('a', 'b');
+    MyList1.InsertAfterExistingNode('b', 'c');
+    MyList1.InsertAfterExistingNode('c', 'd');
+    MyList1.InsertAtEnd('e');
+    MyList1.DeleteNode('c');
+    MyList1.Print();
 }

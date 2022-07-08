@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/c_lion/Linked_List functions/lib/ListsNode.cpp" "D:/c_lion/Linked_List functions/cmake-build-debug/CMakeFiles/Linked_List_functions.dir/lib/ListsNode.cpp.obj"
+  "D:/c_lion/Linked_List functions/lib/node.cpp" "D:/c_lion/Linked_List functions/cmake-build-debug/CMakeFiles/Linked_List_functions.dir/lib/node.cpp.obj"
   "D:/c_lion/Linked_List functions/test/main.cpp" "D:/c_lion/Linked_List functions/cmake-build-debug/CMakeFiles/Linked_List_functions.dir/test/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

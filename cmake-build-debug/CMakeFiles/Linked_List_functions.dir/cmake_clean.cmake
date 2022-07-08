@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Linked_List_functions.dir/lib/ListsNode.cpp.obj"
+  "CMakeFiles/Linked_List_functions.dir/lib/node.cpp.obj"
   "CMakeFiles/Linked_List_functions.dir/test/main.cpp.obj"
   "Linked_List_functions.exe"
   "Linked_List_functions.exe.manifest"

@@ -83,7 +83,13 @@
 		<Unit filename="D:/c_lion/Linked_List functions/include/ListsNode.h">
 			<Option target="Linked_List_functions"/>
 		</Unit>
+		<Unit filename="D:/c_lion/Linked_List functions/include/node.h">
+			<Option target="Linked_List_functions"/>
+		</Unit>
 		<Unit filename="D:/c_lion/Linked_List functions/lib/ListsNode.cpp">
+			<Option target="Linked_List_functions"/>
+		</Unit>
+		<Unit filename="D:/c_lion/Linked_List functions/lib/node.cpp">
 			<Option target="Linked_List_functions"/>
 		</Unit>
 		<Unit filename="D:/c_lion/Linked_List functions/test/main.cpp">

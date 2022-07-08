@@ -3,6 +3,9 @@
 
 CMakeFiles/Linked_List_functions.dir/lib/ListsNode.cpp.obj: ../lib/ListsNode.cpp
 
+CMakeFiles/Linked_List_functions.dir/lib/node.cpp.obj: ../lib/node.cpp
+
 CMakeFiles/Linked_List_functions.dir/test/main.cpp.obj: ../include/ListsNode.h
+CMakeFiles/Linked_List_functions.dir/test/main.cpp.obj: ../include/node.h
 CMakeFiles/Linked_List_functions.dir/test/main.cpp.obj: ../test/main.cpp
 

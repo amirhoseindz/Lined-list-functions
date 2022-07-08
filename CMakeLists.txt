@@ -3,4 +3,4 @@ project(Linked_List_functions)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Linked_List_functions test/main.cpp include/ListsNode.h lib/ListsNode.cpp)
+add_executable(Linked_List_functions test/main.cpp include/ListsNode.h lib/ListsNode.cpp include/node.h lib/node.cpp)

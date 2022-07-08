@@ -1,29 +1,22 @@
 #include <iostream>
+#include "node.h"
 using namespace std;
 template <class T>
-class Node
+class List
 {
-private:
-    T Element;
-    Node* Next;
-public :
-    Node* Head;
-    Node (T Member)
-    {
-        Element = Member;
-        Next = nullptr;
-        Head = nullptr;
-    }
+private :
+    Node <T> *Head = nullptr;
+public:
     void InsertAtHead(T Member)
     {
-        Node* n = new Node(Member);
+        Node <T> *n = new Node(Member);
         n -> Next = Head;
         Head = n;
     }
-    void InsertAfterExistingNode(T  Key, T Member) const
+    void InsertAfterExistingNode(T Key, T Member) const
     {
-        Node* n = new Node(Member);
-        Node* Temp = Head;
+        Node <T> *n = new Node(Member);
+        Node <T> *Temp = Head;
         while (Temp -> Element != Key)
         {
             Temp = Temp -> Next;
@@ -37,13 +30,13 @@ public :
     }
     void InsertAtEnd(T Member)
     {
-        Node* n = new Node(Member);
+        Node <T> *n = new Node(Member);
         if (Head == nullptr)
         {
             Head = n;
             return;
         }
-        Node* Temp = Head;
+        Node <T> *Temp = Head;
         while (Temp -> Next != nullptr)
         {
             Temp = Temp -> Next;
@@ -52,9 +45,9 @@ public :
     }
     void DeleteNode(T Key)
     {
-        Node *Temp = &*Head;
-        Node *FirstElement = &*Head;
-        Node *Prev;
+        Node <T> *Temp = &*Head;
+        Node <T> *FirstElement = &*Head;
+        Node <T> *Prev;
         while (Temp != nullptr)
         {
             if (Temp -> Element == Key)
@@ -80,7 +73,7 @@ public :
     }
     void Print()
     {
-        Node* Temp = Head;
+        Node <T> *Temp = Head;
         while (Temp != nullptr)
         {
             cout << Temp -> Element << ", ";
@@ -89,7 +82,7 @@ public :
     }
     T SearchNode(T Key)
     {
-        Node* Temp = Head;
+        Node <T> *Temp = Head;
         while (Temp != nullptr)
         {
             if (Temp -> Element == Key)
