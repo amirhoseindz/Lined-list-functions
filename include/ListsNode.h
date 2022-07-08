@@ -10,23 +10,23 @@ public:
     void InsertAtHead(T Member)
     {
         Node <T> *n = new Node(Member);
-        n -> Next = Head;
+        n -> _Next = Head;
         Head = n;
     }
     void InsertAfterExistingNode(T Key, T Member) const
     {
         Node <T> *n = new Node(Member);
         Node <T> *Temp = Head;
-        while (Temp -> Element != Key)
+        while (Temp -> GetElementValue() != Key)
         {
-            Temp = Temp -> Next;
+            Temp = Temp -> _Next;
             if (Temp == nullptr)
             {
                 return;
             }
         }
-        n -> Next = Temp -> Next;
-        Temp -> Next = n;
+        n -> _Next = Temp -> _Next;
+        Temp -> _Next = n;
     }
     void InsertAtEnd(T Member)
     {
@@ -37,11 +37,11 @@ public:
             return;
         }
         Node <T> *Temp = Head;
-        while (Temp -> Next != nullptr)
+        while (Temp -> _Next != nullptr)
         {
-            Temp = Temp -> Next;
+            Temp = Temp -> _Next;
         }
-        Temp -> Next = n;
+        Temp -> _Next = n;
     }
     void DeleteNode(T Key)
     {
@@ -50,34 +50,35 @@ public:
         Node <T> *Prev;
         while (Temp != nullptr)
         {
-            if (Temp -> Element == Key)
+            if (Temp -> GetElementValue() == Key)
             {
                 break;
             }
             Prev = Temp;
-            Temp = Temp -> Next;
+            Temp = Temp -> _Next;
         }
         if (Temp == nullptr)
         {
             return;
         }
-        if (Temp -> Element == FirstElement -> Element)
+        if (Temp -> GetElementValue() == FirstElement -> GetElementValue())
         {
-            *&Head = Temp -> Next;
+            *&Head = Temp -> _Next;
         }
         else
         {
-            Prev -> Next = Temp -> Next;
+            Prev -> _Next = Temp -> _Next;
         }
         free(Temp);
     }
     void Print()
     {
+        cout << "the members of your list are : " << endl;
         Node <T> *Temp = Head;
         while (Temp != nullptr)
         {
-            cout << Temp -> Element << ", ";
-            Temp = Temp -> Next;
+            cout << Temp -> GetElementValue() << ", ";
+            Temp = Temp -> _Next;
         }
     }
     T SearchNode(T Key)
@@ -85,11 +86,11 @@ public:
         Node <T> *Temp = Head;
         while (Temp != nullptr)
         {
-            if (Temp -> Element == Key)
+            if (Temp -> GetElementValue() == Key)
             {
                 return true;
             }
-            Temp = Temp->Next;
+            Temp = Temp -> _Next;
         }
         return false;
     }

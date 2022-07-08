@@ -4,12 +4,15 @@ template <class T>
 class Node
 {
 protected:
-    T Element;
-    Node* Next;
+    T _Element;
 public :
+    Node* _Next = nullptr;
     Node (T Member)
     {
-        Element = Member;
-        Next = nullptr;
+        _Element = Member;
+    }
+    T GetElementValue()
+    {
+        return _Element;
     }
 };
