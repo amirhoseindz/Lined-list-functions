@@ -3,23 +3,19 @@
 using namespace std;
 int main()
 {
-    Node* List;
-    List->InsertAtHead(1);
-    List->InsertAfterExistingNode(1, 2);
-    List->InsertAfterExistingNode(2, 3);
-    List->InsertAfterExistingNode(3, 4);
-    List->InsertAtEnd(5);
-    List->DeleteNode(1);
+    int Value;
+    Node <int> List(Value);
+    List.InsertAtHead(1);
+    List.InsertAfterExistingNode(1, 2);
+    List.InsertAfterExistingNode(2, 3);
+    List.InsertAfterExistingNode(3, 4);
+    List.InsertAtEnd(5);
+    List.DeleteNode(1);
+    List.Print();
     int TargetNumber;
-    Node* Temp = List -> Head;
-    while (Temp != nullptr)
-    {
-        cout << Temp -> Element << ", ";
-        Temp = Temp -> Next;
-    }
     cout << endl << "pleas enter the number you want to see if its in list or not : " << endl;
     cin >> TargetNumber;
-    if (List -> SearchNode(TargetNumber))
+    if (List.SearchNode(TargetNumber))
     {
         cout << "The number is in th list" << endl;
     }
@@ -27,4 +23,13 @@ int main()
     {
         cout << "The number is not on the list" << endl;
     }
+    char Char;
+    Node <char> List1(Char);
+    List1.InsertAtHead('a');
+    List1.InsertAfterExistingNode('a', 'b');
+    List1.InsertAfterExistingNode('b', 'c');
+    List1.InsertAfterExistingNode('c', 'd');
+    List1.InsertAtEnd('e');
+    List1.DeleteNode('c');
+    List1.Print();
 }
